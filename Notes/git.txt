@@ -19,9 +19,15 @@ git 을 로컬 저장소와 원격 저장소가 필요하며, 이를 사용하�
 계정이 있는사람은 추가하는 작업을 하세요~
 
 git 명령어 정리
+git config --global user.email "email@example.com"
+git config --global user.username "Your name"
+유저등록
+
+git remote add origin https://github.com/poby13/zimnote.git
 
 git init
-처음 사용유저가 사용
+처음 사용유저가 사용 마스터 등록
+
 git add --all .
 스테이징 추가 
 git commit -m "메세지" 
@@ -29,9 +35,6 @@ git commit -m "메세지"
 git status
 내용 확인하기
 
-커밋후 주소를 해주고 ,
 밑에 명령어로 사용
-git remote add origin https://github.com/enthalpy3/zimnote.git
-내꺼 유저 아이디
 git push -u origin master
 
