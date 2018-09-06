@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-05T10:36:10+09:00
+
+====== 이클립스 단축키 ======
+Created 수요일 05 9월 2018
+
+추천 완성 : ctrl + space
+자동 정렬 : ctrl + shift + f
+자동 임포트 : ctrl + shift + o (영어 o)
+
+
+해당 행 위아래 이동 : alt + ↑ or alt + ↓
+해당 행 아래에 복사 : ctrl + alt + ↓
+해당 행 삭제 : ctrl + d
+
+
+
+세로 편집 : alt + shift + A
+대문자 변환 : ctrl + shift + x
+소문자 변환 : ctrl + shift + y
+범위 들여쓰기 : ctrl + shift + tab
+
+범위 내어쓰기 : shift + tab
+범위 주석 : ctrl + shift + /
+범위 주석 해제 : ctrl + shift + \
+
+메서드나 필드가 참조하고 있는 곳으로 이동 : ctrl + shift + g
+getter, setter 자동 생성 : alt + shift + s + r
+default 생성자 자동 생성 : alt + shift + s + c
+bulid 생성자 자동 생성 : alt + shift + s + o
+
+
+저장 : ctrl + s
+모두 저장 : ctrl + shift + s
+되돌리기 : ctrl + z
+앞으로 : ctrl + y
+
+디버깅 : F11
+디버깅 및 실행 : ctrl + F11

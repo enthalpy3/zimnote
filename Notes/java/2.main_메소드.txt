@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-04T14:09:52+09:00
+
+====== 2.main 메소드 ======
+Created 화요일 04 9월 2018
+
+반드시  public static void main 사용해야된다.
+
+public class Test {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}

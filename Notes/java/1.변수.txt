@@ -1,0 +1,58 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-04T13:58:09+09:00
+
+====== 1.변수 ======
+Created 화요일 04 9월 2018
+
+
+변수의 이름을 지을 때는 다음과 같이 지켜야 할 몇가지 규칙이 있다.
+
+	◈변수명은 숫자로 시작할 수 없다.
+	◈_(underscore) 와 $ 문자 이외의 특수문자는 사용할 수 없다.
+	◈자바의 키워드는 변수명으로 사용할 수 없다. (예: int, class, return 등)
+◈반드시 자료형과 일치하는 값을 대입 해야 된다.
+
+[참고] 자바 키워드
+
+abstract  continue  for         new        switch
+assert    default   goto        package    synchronized
+boolean   do        if          private    this
+break     double    implements  protected  throw
+byte      else      import      public     throws
+case      enum      instanceof  return     transient
+catch     extends   int         short      try
+char      final     interface   static     void
+class     finally   long        strictfp   volatile
+const     float     native      super      while
+
+
+자주 쓰이는 자료형
+
+자료형에는 int, String 외에도 많은 자료형이 있다. 자바에서 가장 많이 사용되는 자료형은 다음과 같다.
+
+	▶int (숫자)
+	▶long(숫자)
+	▶double(소수표현 숫자)
+
+	▶boolean(참,불)
+	▶char(글자하나문자)
+객채
+	▶String(문자)
+	▶StringBuffer(문자)
+
+	▶List()
+	▶Map()
+
+사용자 정의 자료형
+사용자가 직접 자료형을 만들 수 있다.
+class Animal {
+}
+
+주석
+
+// 라인 주석 
+
+[[/*]] 
+블럭주석
+*/
