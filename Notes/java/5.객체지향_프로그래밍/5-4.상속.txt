@@ -20,7 +20,6 @@ public class Animal {
 }
 Dog.java
 
-
 public class Dog **extends** Animal {
 	public void sleep() {
 		System.out.println(this.name+" zzz");
@@ -79,6 +78,12 @@ Object dog = new Dog();
 --------------------
 
 **메소드 오버라이딩 (Method overriding)**
+오버라이딩의 조건
+* 메소드의 이름이 같아야된다.
+* 메소드 괄호가 비어있거나 매개변수의 숫자와 데이터 타입 그리고 순서가 같아야된다.
+* 메소드의 리턴 타입이 같아야된다.
+메소드의 서면(signature) 라고도 한다
+
 HouseDog 클래스는 Dog 클래스를 상속하여 다음과 같이 만들 수 있다.
 
 HouseDog.java
