@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-22T10:10:02+09:00
+
+====== jquery ======
+Created 월요일 22 10월 2018
+
+javascript 라이브러리.
+jquery 라이브러리를 지정해야된다.
+
+
+Examples:
+
+$(this).hide() - hides the current element.
+
+$("p").hide() - hides all <p> elements.
+
+$(".test").hide() - hides all elements with class="test".
+
+$("#test").hide() - hides the element with id="test".

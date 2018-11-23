@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-22T10:31:05+09:00
+
+====== 로딩방식 ======
+Created 월요일 22 10월 2018
+
+ <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script src="my_jquery_functions.js"></script> <<<< 불러온다..
+</head> 

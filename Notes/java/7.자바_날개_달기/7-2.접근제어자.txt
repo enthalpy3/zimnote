@@ -1,0 +1,105 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-09-11T10:01:50+09:00
+
+====== 7-2.접근제어자(Access Modifier) ======
+Created 화요일 11 9월 2018
+
+자바에는 다음과 같은 접근 제어자가 있다.
+private
+default
+protected
+public
+
+**허용범위(최소부터)**
+접근제어자
+private -> default -> protected -> public 순으로 보다 많은 접근을 허용한다
+범위
+클래스내부<패키지내<패키지내 또는 상속받은 클래스<어디서나 접근
+--------------------
+
+**private**
+접근제어자가 private으로 설정되었다면 private 이 붙은 변수, 메소드는 해당 클래스에서만 접근이 가능하다.
+예)
+public class AccessModifier {
+	private String secret; //클래스 내에서만 접근가능
+	private String getSecret() { // 클래스 내에서만 접근 가능
+		return this.secret;
+	}
+}
+위 예제의 secret 변수와 getSecret 메소드는 오직 AccessModifier 클래스에서만 접근이 가능하고 다른 클래스에서는 접근이 불가능하다.
+--------------------
+
+**default**
+접근제어자를 별도로 설정하지 않는다면 접근제어자가 없는 변수, 메소드는 default 접근제어자가 되어 해당 패키지 내에서만 접근이 가능하다.
+
+다음의 예제를 보자.
+
+HouseKim.java
+
+package jump2java.house;
+
+public class HouseKim {
+	String lastname = "kim"; // default 접근제어자가 되어 같은 패키지에서는 접근이 가능
+}
+HousePark.java
+
+package jump2java.house;
+
+public class HousePark {
+	String lastname = "park";
+
+	public static void main(String[] args) {
+		HouseKim kim = new HouseKim();
+		System.out.println(kim.lastname); //HouseKim 의 lastname 변수에 접근할 수 있다.
+	}
+}
+HouseKim과 HousePark의 패키지는 jump2java.house로 동일하다. HouseKim의 lastname 변수는 접근제어자가 default이므로 HousePark 클래스에서 main 메소드에서 사용한 것과 같이 kim.lastname 으로 HouseKim의 lastname 변수에 접근이 가능하다.
+--------------------
+
+**protected**
+접근제어자가 protected로 설정되었다면 protected가 붙은 변수, 메소드는 동일 패키지내의 클래스 또는 해당 클래스를 상속받은 외부 패키지의 클래스에서 접근이 가능하다.
+
+다음의 예를 보자.
+
+HousePark.java
+
+package jump2java.house;
+
+public class HousePark {
+	protected String lastname = "park"; // 상속받은 클래스 접근 가능
+}
+EungYongPark.java
+
+package jump2java.house.person; // 패키지의 경로가 다르다.
+
+import house.HousePark; // 다른 패키지이 기때문에 임포트 후 사용할수 있다.
+
+public class EungYongPark extends HousePark {       // HousePark를 상속
+	public static void main(String[] args) {
+		EungYongPark eyp = new EungYongPark();
+		System.out.println(eyp.lastname);     // 상속받은 lastname 속성의 접근제어자가 protected이기 때문에 사용가능  
+	}    
+}
+HousePark클래스를 상속받은 EungYongPark이라는 클래스의 패키지는 jump2java.house.person으로 HousePark의 패키지인 jump2java.house와 다르지만 HousePark의 lastname 변수가 protected로 설정되었기 때문에 eyp.lastname과 같은 접근이 가능하다.
+
+만약 lastname의 접근제어자가 protected 가 아닌 default 접근제어자였다면 eyp.lastname 문장은 컴파일 에러를 유발 할 것이다.
+--------------------
+
+**public**
+접근제어자가 public으로 설정되었다면 public 접근제어자가 붙은 변수, 메소드는 어떤 클래스에서라도 접근이 가능하다.
+
+package jump2java.house;
+
+public class HousePark {
+	protected String lastname = "park";
+	public String info = "this is public message.";
+}
+위 예제의 HousePark의 info 변수는 public 접근제어자가 붙어 있으므로 어떤 클래스에서던지 접근이 가능하다.
+
+이상과 같이 총 4개의 접근제어자에 대해서 알아보았다. 예제는 변수만을 대상으로 설명했지만 메소드도 마찬가지의 접근제어 규칙을 따른다.
+
+※ 클래스내의 클래스를 inner 클래스라고 부르는데 이러한 inner클래스에도 역시 접근제어자를 붙여서 접근을 제어할 수 있다.
+
+접근제어자를 모두 public으로 설정해도 프로그램은 잘 동작할 것이다. 하지만 접근제어자를 이용하면 프로그래머의 코딩 실수를 방지할 수 있고 기타 위험요소를 제거할 수 있는 등의 많은 장점이 있다.
+

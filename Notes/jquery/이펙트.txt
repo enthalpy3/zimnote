@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-22T11:25:06+09:00
+
+====== 이펙트 ======
+Created 월요일 22 10월 2018
+
+$(selector).hide(speed,callback);
+
+$(selector).show(speed,callback); 
+
+$(selector).toggle(speed,callback); 
+
+Examples
+
+jQuery fadeIn()
+Demonstrates the jQuery fadeIn() method.
+
+jQuery fadeOut()
+Demonstrates the jQuery fadeOut() method.
+
+jQuery fadeToggle()
+Demonstrates the jQuery fadeToggle() method.
+
+jQuery fadeTo()
+Demonstrates the jQuery fadeTo() method.

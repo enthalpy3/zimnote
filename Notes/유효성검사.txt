@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-10-23T16:11:12+09:00
+
+====== 유효성검사 ======
+Created 화요일 23 10월 2018
+
